@@ -1,0 +1,38 @@
+# docs: man 5 zathurarc. Defaults are vim-like (j/k, gg/G, /, +/-, a/s fit, r rotate, d dual page)
+set selection-clipboard clipboard
+set adjust-open best-fit
+set scroll-page-aware true
+set scroll-step 80
+set guioptions ""
+set window-title-basename true
+set statusbar-home-tilde true
+set database sqlite
+set synctex true
+
+set font "monospace 11"
+set default-bg "#111111"
+set default-fg "#cccccc"
+set statusbar-bg "#1a1a1a"
+set statusbar-fg "#cccccc"
+set inputbar-bg "#1a1a1a"
+set inputbar-fg "#cccccc"
+set notification-bg "#1a1a1a"
+set notification-fg "#cccccc"
+set notification-error-fg "#f7768e"
+set notification-warning-fg "#e0af68"
+set highlight-color "rgba(122,162,247,0.4)"
+set highlight-active-color "rgba(224,175,104,0.5)"
+set completion-highlight-bg "#7aa2f7"
+set completion-highlight-fg "#111111"
+# dark mode (Ctrl+r toggles); keep images in their real colors
+set recolor-lightcolor "#111111"
+set recolor-darkcolor "#cccccc"
+set recolor-keephue true
+
+# u = toggle statusbar, f = fullscreen (instead of link follow, which moves to F)
+map u toggle_statusbar
+map f toggle_fullscreen
+map F follow
+map [fullscreen] f toggle_fullscreen
+map [fullscreen] F follow
+map [fullscreen] u toggle_statusbar

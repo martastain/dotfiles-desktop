@@ -1,0 +1,77 @@
+# Overrides only; defaults: /usr/share/swayimg/swayimgrc, docs: man 5 swayimgrc
+# Unlisted keys keep their default binding; use "none" to drop one.
+
+[general]
+size = fullscreen
+
+[viewer]
+window = #000000ff
+transparency = grid
+scale = optimal
+history = 3
+preload = 3
+
+[slideshow]
+window = #000000ff
+
+[gallery]
+window = #000000ff
+background = #1a1a1aff
+select = #333333ff
+border_color = #7aa2f7ff
+border_width = 3
+aspect = fit
+preload = yes
+pstore = yes
+
+[list]
+# opening one file from a file manager lets you browse its siblings
+all = yes
+order = numeric
+
+[info]
+# hidden by default, toggle with i
+show = no
+
+[keys.viewer]
+# arrows/hl browse files like most viewers; Shift pans
+Left = prev_file
+Right = next_file
+h = prev_file
+l = next_file
+BackSpace = prev_file
+Shift+Left = step_left 10
+Shift+Right = step_right 10
+Shift+Up = step_up 10
+Shift+Down = step_down 10
+Shift+h = step_left 10
+Shift+l = step_right 10
+j = step_down 10
+k = step_up 10
+Shift+k = zoom keep
+g = first_file
+Shift+g = last_file
+# zoom: wheel at cursor, Ctrl+wheel / Shift+wheel kept from defaults
+ScrollUp = zoom +10 mouse
+ScrollDown = zoom -10 mouse
+1 = zoom real
+0 = zoom optimal
+r = rotate_right
+Shift+r = rotate_left
+Ctrl+r = reload
+x = rand_file
+t = mode gallery
+y = exec wl-copy < '%' && echo "Copied: %"
+Delete = exec gio trash '%' && echo "Trashed: %"; skip_file
+MouseRight = mode gallery
+
+[keys.gallery]
+h = step_left
+l = step_right
+j = step_down
+k = step_up
+g = first_file
+Shift+g = last_file
+t = mode viewer
+y = exec wl-copy < '%' && echo "Copied: %"
+Delete = exec gio trash '%' && echo "Trashed: %"; skip_file
