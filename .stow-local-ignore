@@ -1,0 +1,4 @@
+\.git
+^/README.*
+^/\.stow-local-ignore
+^/set-default-apps\.sh

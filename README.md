@@ -1,3 +1,26 @@
+Desktop dotfiles
+================
+
+Install:
+
+```bash
+sudo apt install swayimg zathura mpv
+cd ~
+git clone https://github.com/martastain/dotfiles-desktop .dotfiles-desktop
+cd .dotfiles-desktop
+stow .
+./set-default-apps.sh
+```
+
+Kitty comes from the official installer, since distro packages are usually outdated:
+
+```bash
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+```
+
+Install `~/.dotfiles` first. `set-default-apps.sh` expects nvim from mise.
+
+
 
 Swayimg
 -------
